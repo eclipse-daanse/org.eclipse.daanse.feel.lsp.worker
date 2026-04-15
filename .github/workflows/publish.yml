@@ -22,7 +22,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Set version from tag
-        run: npm version "${GITHUB_REF_NAME}" --no-git-tag-version
+        run: npm version "${GITHUB_REF_NAME}" --no-git-tag-version --allow-same-version
 
       - name: Determine npm tag
         id: npm-tag
