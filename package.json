@@ -1,0 +1,39 @@
+{
+  "name": "@eclipse-daanse/org.eclipse.daanse.feel.lsp.worker",
+  "version": "0.0.1-next.1",
+  "description": "Web Worker LSP server for FEEL-Langium (Monaco browser integration)",
+  "type": "module",
+  "main": "dist/worker.js",
+  "module": "dist/worker.js",
+  "types": "dist/worker.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/worker.js",
+      "types": "./dist/worker.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "langium": "3.5.0",
+    "vscode-languageserver": "9.0.1",
+    "@eclipse-daanse/org.eclipse.daanse.feel.langium": "0.0.1-next.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eclipse-daanse/org.eclipse.daanse.feel.lsp.worker.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "EPL-2.0"
+}
